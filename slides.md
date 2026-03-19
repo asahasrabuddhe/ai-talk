@@ -13,8 +13,9 @@ duration: 35min
 
 ---
 
-# Slide 1 — AI Landscape
-*Kush Saraiya*
+# AI Landscape
+
+![](./images/slide-1.png)
 
 ---
 
@@ -23,8 +24,35 @@ duration: 35min
 
 ---
 
-# Slide 3 — The WOW Factor
-*Kush Saraiya*
+# The Moment AI stopped being a tool
+
+```shell
+> Upgrade my project to Java 17
+```
+
+```shell
+> Thinking...
+> I need permission to update your project files: y/n
+```
+
+```shell
+> y
+```
+
+```shell
+> Thinking...
+
+Detected Java 7 → upgrading to Java 17
+Updating Gradle dependencies...
+Refactoring deprecated APIs...
+Running build checks...
+Migration completed. Project successfully migrated to Java 17 and the build is passing.
+
+Summary:
+* Code upgraded from Java 7 to Java 17
+* Gradle version upgraded from 1.9 to 8.5.1
+* Deprecated methods replaced with their upgraded contracts
+```
 
 ---
 
