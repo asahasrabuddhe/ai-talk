@@ -54,10 +54,18 @@ Summary:
 * Deprecated methods replaced with their upgraded contracts
 ```
 
+## WOW!! 😮
+
 ---
 
-# Slide 4 — The Bittersweet Reality
-*Kush Saraiya*
+# The Bittersweet Reality
+
+The WOW moment fades fast! 😕
+
+- Same prompt, different results
+- Repeating instructions
+
+Why?
 
 ---
 
