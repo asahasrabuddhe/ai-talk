@@ -91,8 +91,39 @@ Context is everything AI needs to not ask you a clarifying question.
 
 ---
 
-# Slide 8 — The Google Search Parallel
-*Kush Saraiya*
+# Same Tool, Different Outcomes
+
+<div class="grid grid-cols-2 gap-8 items-center mt-8">
+
+<div>
+
+#### 🤔 Person A
+Google → ❌ Random results
+
+<br/>
+
+#### ⚡ Person B
+Google → ✅ Exact answer
+
+</div>
+
+<div>
+
+- Same tool
+- Same access
+- Different outcomes
+
+</div>
+
+</div>
+
+<br>
+<br>
+
+<v-click>
+<blockquote>It's not knowing AI. It's about how to <em>communicate</em> with it.
+</blockquote>
+</v-click>
 
 ---
 
