@@ -127,8 +127,47 @@ Google → ✅ Exact answer
 
 ---
 
-# Slide 9 — Breaking the Myths
-*Kush Saraiya*
+# Myth vs Truth
+
+<div v-click>
+
+Better prompts = better results. --- ❌ Myth
+
+</div>
+
+<div v-click>
+
+Better problem framing + context = better results. --- ✅ Truth
+
+</div>
+
+<br>
+
+<div v-click>
+
+More context is always better. --- ❌ Myth
+
+</div>
+
+<div v-click>
+
+Relevant context > more context. --- ✅ Truth
+
+</div>
+
+<br>
+
+<div v-click>
+
+AI understands what you mean. --- ❌ Myth
+
+</div>
+
+<div v-click>
+
+It generates responses based on patterns it has learned. --- ✅ Truth
+
+</div>
 
 ---
 
