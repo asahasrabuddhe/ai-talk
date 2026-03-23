@@ -74,8 +74,15 @@ Why?
 
 ---
 
-# Slide 6 — The Journey with Agents
-*Kush Saraiya*
+# The Journey with Agents
+
+What exactly is a "context"?
+
+<v-click>
+<blockquote>
+Context is everything AI needs to not ask you a clarifying question.
+</blockquote>
+</v-click>
 
 ---
 
