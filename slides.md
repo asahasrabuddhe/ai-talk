@@ -60,10 +60,14 @@ Summary:
 
 # The Bittersweet Reality
 
-The WOW moment fades fast! 😕
+##
 
-- Same prompt, different results
-- Repeating instructions
+The **WOW** moment fades fast! 😕
+
+- Some people offload entire workflows to AI --- and it just works!
+- Some spend 20 minutes rephrasing the same question.
+
+Same tool. Wildly different results.
 
 Why?
 
