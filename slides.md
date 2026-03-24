@@ -19,8 +19,25 @@ duration: 35min
 
 ---
 
-# Slide 2 — Expectations
-*Ajitem Sahasrabuddhe*
+# You already have an opinion.
+
+> "Love it, hate it — you can't ignore it."
+
+<!--
+Three camps in this room — and you can probably spot all of them.
+
+The believers: they've already delegated half their workflow to AI. They're waiting for everyone else to catch up.
+
+The sceptics: they tried it once, got a confident wrong answer, and decided the whole thing was overhyped. They're waiting to be proven right.
+
+The curious: they haven't really started. They're not sure if they're behind, or if there's still time.
+
+All three are right about something. This talk is for all of them.
+
+Don't rush this slide. Let the room feel acknowledged before you move on. The goal is to make everyone feel like the next 35 minutes is worth their time — wherever they're starting from.
+
+Pause after the quote. Then move.
+-->
 
 ---
 
@@ -73,8 +90,34 @@ Why?
 
 ---
 
-# Slide 5 — The Mindset Shift
-*Ajitem Sahasrabuddhe*
+# The tool isn't the problem. The onboarding is.
+
+> "If your value is in writing code, AI is a threat. If your value is in solving problems, AI is a multiplier."
+
+<!--
+This is the most important slide in the session. Take your time here.
+
+Use the Technogise consultant analogy. When we join a new engagement, day one doesn't look like "here's the codebase, ship the feature." It looks like a week of context transfer — domain, architecture, past decisions, team conventions, the unwritten rules. Not because the consultant is incapable. Because capability without context produces the wrong output.
+
+AI works exactly the same way.
+
+Then contrast two approaches out loud — don't put them on the slide, say them:
+
+"Write this function."
+
+vs.
+
+"Here's the system, here's the problem, here are the constraints, here's what done looks like — suggest an approach."
+
+The second gets dramatically better results. Not because the prompt is fancier. Because the context is richer.
+
+Land the three principles before you move on:
+- Context is the real prompt.
+- Iteration beats perfection.
+- Conversation beats commands.
+
+Pause after the quote. Let it sit. This is the sentence you want people to carry out of the room.
+-->
 
 ---
 
@@ -90,8 +133,25 @@ Context is everything AI needs to not ask you a clarifying question.
 
 ---
 
-# Slide 7 — Ways to Build Context
-*Ajitem Sahasrabuddhe*
+# Clear thinking precedes clear prompting.
+
+> "The discipline of articulating your system clearly enough for an AI to work with it makes you a sharper engineer regardless."
+
+<!--
+Keep this brief — it's a setup slide, not the main act. The core message: the real skill isn't knowing which tool to use. It's being able to explain what you need.
+
+Architecture docs, coding style, constraints — these aren't just AI inputs. They're the artefacts of a team that thinks clearly about its own system.
+
+Then introduce two tools as examples of the principle, not the point:
+
+Agency Agents (github.com/msitarzewski/agency-agents) — open-source agent personalities you drop directly into your coding tool. Frontend wizards, reality checkers, specialists. Instead of configuring agents from scratch, you're assembling a team that already knows its job.
+
+OpenViking (openviking.ai) — an open-source context database for AI agents. A filesystem for your agent's brain. Hierarchical structure (L0/L1/L2) so agents load only the context they need, when they need it. No more fragmented vector storage or RAG black boxes.
+
+Frame both as: "Here's what it looks like when someone has thought hard about context organisation."
+
+Don't linger. The tools are examples. The quote is the point.
+-->
 
 ---
 
