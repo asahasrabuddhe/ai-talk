@@ -197,6 +197,10 @@ It generates responses based on patterns it has learned. --- ✅ Truth
 
 ##### AI is confident even when wrong. Always verify critical outputs.
 
+✅ Ask AI to plan first
+
+##### Ask for a plan of action before the solution. Review, refine, then execute.
+
 ✅ Don't chase features.
 
 ##### We delivered the Java migration before skills, agents, or custom commands existed. Mindset > Features.
