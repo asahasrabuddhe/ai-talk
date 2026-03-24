@@ -175,13 +175,77 @@ It generates responses based on patterns it has learned. --- ✅ Truth
 
 ---
 
-# Slide 10 — Live Demo
-*Ajitem Sahasrabuddhe*
+# Good vs Bad prompt: Example 1
+
+#### Bad Prompt
+
+Task: Convert a legacy build.gradle file to Gradle 8+ syntax and upgrade all dependencies to Java 17 compatible versions.
+
+#### Good prompt
+
+```markdown
+Task: Convert a legacy build.gradle file to Gradle 8+ syntax and upgrade all dependencies to Java 17 compatible versions
+only as specified below.
+
+## Phase 0: General rules
+• **Constraint**: Do not add comments and try to replace dependencies in-line so they show up clearly in git diff
+• **Constraint**: Do not upgrade every dependency you think you should do in order to upgrade to Java 17.
+Stick to the ones mentioned here.
+• **Constraint**: Do not make any changes beyond current directory.
+• **Constraint**: If you find compilation errors after making the changes during the validation stage,
+wait before proceeding to fix those and ask for further inputs.
+
+## Phase 1: Gradle Syntax Modernization
+
+### 1. Update log4j dependencies:
+• Find all log4j dependencies (log4j-api, log4j-core, log4j-1.2-api)
+• Update version from any existing version to 2.23.1
+
+### 2. Update Spring dependencies:
+• Find all Spring dependencies
+• Update version from any existing version to 6.2.7
+
+## Phase 2: Structure Preservation and Validation
+
+### 3. Preserve existing structure:
+• Keep all other dependencies unchanged
+• Maintain existing dependency scopes (compileOnly, implementation, testImplementation, etc.)
+• Preserve all non-dependency blocks (jar, java, test configurations)
+
+### 4. Validation:
+• Ensure the build compiles successfully
+• Verify no functionality is lost in the conversion
+• Test with: gradle clean build -x test
+• Ensure Java 17 compatibility for all dependencies
+• Verify no breaking changes in functionality
+
+### 5. Add Java tooling, if not there already
+java {
+     toolchain {
+         languageVersion = JavaLanguageVersion.of(17)
+    }
+ }
+
+### 6. Add/Modify sourceSets based on project structure. Determine the value to go inside srcDirs.
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+}
+
+### 7. Remove metaInfDir task. Instead add metaInf { from ('src/main/META-INF') } under jar tag
+
+Expected outcome: A fully modernized build.gradle file compatible with Gradle 8+ that uses Java 17 compatible dependencies with
+official Maven coordinates, eliminating proprietary group IDs and deprecated libraries while maintaining all existing
+functionality.
+```
 
 ---
 
-# Slide 11 — Bring Your Own Problem
-*Kush Saraiya · Ajitem Sahasrabuddhe*
+# Good vs Bad prompt: Example 2
+*Ajitem Sahasrabuddhe*
 
 ---
 
