@@ -185,5 +185,26 @@ It generates responses based on patterns it has learned. --- ✅ Truth
 
 ---
 
-# Slide 12 — Best Practices & Limitations
-*Kush Saraiya · Ajitem Sahasrabuddhe*
+# Best Practices & Limitations
+
+##
+
+✅ Break problems down
+
+##### Don't hand AI a vague brief like "refactor my code".
+
+✅ Trust, but verify
+
+##### AI is confident even when wrong. Always verify critical outputs.
+
+✅ Don't chase features.
+
+##### We delivered the Java migration before skills, agents, or custom commands existed. Mindset > Features.
+
+✅ Don't over-engineer your agents
+
+##### AI's power is natural language. Don't clip its wings with essays of rigid instructions.
+
+✅ Never paste sensitive data
+
+##### No credentials, PII, or proprietary code into public models.
