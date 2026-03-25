@@ -1,0 +1,12 @@
+.speaker-row {
+    margin-left: 30px;
+}
+
+.cover-right {
+    width: 50%;
+}
+
+.ghost-code-slot {
+    right: -80% !important;
+    text-align: left;
+}

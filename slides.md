@@ -1,16 +1,39 @@
 ---
-theme: seriph
+theme: slidev-theme-architectural-console
 background: https://cover.sli.dev
-title: AI Talk
+title: The Effective Use of AI
 class: text-center
 drawings:
   persist: false
 transition: slide-left
 duration: 35min
+label: TECHNOGISE
 ---
 
-# AI Talk
+# The Effective Use of AI
 
+::subtitle::
+Practical AI workflows, context engineering, and agentic execution
+
+::speaker::
+Kush & Ajitem
+
+::role::
+&nbsp;
+
+::ghostCode::
+```
+$ agent "Add pagination to GET /users — limit + offset, max 100 per page"
+
+▸ Reading src/routes/users.ts …
+▸ Applying patch: query params + validation (zod)
+▸ Updating tests: users.pagination.spec.ts
+
+✓ 3 files changed — ready to review
+```
+
+---
+layout: center
 ---
 
 # AI Landscape
@@ -18,8 +41,8 @@ duration: 35min
 ![](./images/slide-1.png)
 
 ---
-
-# You already have an opinion.
+layout: statement
+---
 
 > "Love it, hate it — you can't ignore it."
 
@@ -40,38 +63,57 @@ Pause after the quote. Then move.
 -->
 
 ---
+layout: default
+---
 
-# The Moment AI stopped being a tool
+# Expectations
 
-```shell
-> Upgrade my project to Java 17
-```
+ABC
 
-```shell
-> Thinking...
-> I need permission to update your project files: y/n
-```
+---
+layout: terminal
+windowLabel: "agent session"
+windowCommand: "upgrade-project --java 17"
+---
 
-```shell
-> y
-```
+::title::
+The Moment AI <span class="ac-accent">stopped being a tool</span>
 
-```shell
-> Thinking...
+::default::
+<div class="terminal-session-fit">
+<div><span class="ac-term-prompt">></span> <span class="ac-term-cmd">Upgrade my project to Java 17</span></div>
+<div class="ac-term-output">Thinking...</div>
+<div class="ac-term-output">I need permission to update your project files: y/n</div>
+<div><span class="ac-term-prompt">></span> <span class="ac-term-cmd">y</span></div>
+<div class="ac-term-output">Thinking...</div>
+<div class="ac-term-output">Detected Java 7 - upgrading to Java 17</div>
+<div class="ac-term-output">Updating Gradle dependencies...</div>
+<div class="ac-term-output">Refactoring deprecated APIs...</div>
+<div class="ac-term-output">Running build checks...</div>
+<div class="ac-term-success">Migration completed. Build is passing.</div>
+<div class="ac-term-output">Summary:</div>
+<div class="ac-term-output">- Code upgraded from Java 7 to Java 17</div>
+<div class="ac-term-output">- Gradle upgraded from 1.9 to 8.5.1</div>
+<div class="ac-term-output">- Deprecated methods replaced with upgraded contracts</div>
+<div class="ac-term-success">WOW!! 😮</div>
+</div>
 
-Detected Java 7 → upgrading to Java 17
-Updating Gradle dependencies...
-Refactoring deprecated APIs...
-Running build checks...
-Migration completed. Project successfully migrated to Java 17 and the build is passing.
-
-Summary:
-* Code upgraded from Java 7 to Java 17
-* Gradle version upgraded from 1.9 to 8.5.1
-* Deprecated methods replaced with their upgraded contracts
-```
-
-## WOW!! 😮
+<style>
+:deep(.layout-terminal:has(.terminal-session-fit) .terminal-title) {
+  padding-bottom: 0.5rem;
+}
+:deep(.layout-terminal:has(.terminal-session-fit) .terminal-title h2) {
+  font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+  line-height: 1.12;
+  margin: 0;
+}
+:deep(.layout-terminal:has(.terminal-session-fit) .terminal-body) {
+  overflow: hidden;
+  font-size: clamp(9px, 1.45vmin, 11px);
+  line-height: 1.22;
+  padding: 10px 12px;
+}
+</style>
 
 ---
 
@@ -89,8 +131,8 @@ Same tool. Wildly different results.
 Why?
 
 ---
-
-# The tool isn't the problem. The onboarding is.
+layout: statement
+---
 
 > "If your value is in writing code, AI is a threat. If your value is in solving problems, AI is a multiplier."
 
@@ -120,6 +162,14 @@ Pause after the quote. Let it sit. This is the sentence you want people to carry
 -->
 
 ---
+layout:default
+---
+
+# The Mindset Shift
+
+ABC
+
+---
 
 # The Journey with Agents
 
@@ -132,8 +182,8 @@ Context is everything AI needs to not ask you a clarifying question.
 </v-click>
 
 ---
-
-# Clear thinking precedes clear prompting.
+layout: statement
+---
 
 > "The discipline of articulating your system clearly enough for an AI to work with it makes you a sharper engineer regardless."
 
@@ -154,35 +204,32 @@ Don't linger. The tools are examples. The quote is the point.
 -->
 
 ---
+layout: default
+---
+
+# Ways to Build Context
+
+ABC
+
+---
+layout: two-cols
+---
 
 # Same Tool, Different Outcomes
 
-<div class="grid grid-cols-2 gap-8 items-center mt-8">
-
-<div>
-
 #### 🤔 Person A
-Google → ❌ Random results
+Google -> ❌ Random results
 
 <br/>
 
 #### ⚡ Person B
-Google → ✅ Exact answer
+Google -> ✅ Exact answer
 
-</div>
+::right::
 
-<div>
-
-- Same tool
-- Same access
-- Different outcomes
-
-</div>
-
-</div>
-
-<br>
-<br>
+- Same tool  
+- Same access  
+- Different outcomes  
 
 <v-click>
 <blockquote>It's not knowing AI. It's about how to <em>communicate</em> with it.
@@ -190,149 +237,172 @@ Google → ✅ Exact answer
 </v-click>
 
 ---
+layout: comparison-table
+title: "Myth vs Truth"
+subtitle: "Prompting discipline over prompt tricks"
+columns:
+  - "Myth"
+  - "Truth"
+rows:
+  - criterion: "Prompt quality"
+    values:
+      - "Better prompts = better results"
+      - "Better framing + context = better results"
+    verdict: "Truth"
+    verdictVariant: "info"
+  - criterion: "Context amount"
+    values:
+      - "More context is always better"
+      - "Relevant context > more context"
+    verdict: "Truth"
+    verdictVariant: "amber"
+  - criterion: "Model understanding"
+    values:
+      - "AI understands what you mean"
+      - "AI predicts patterns from training"
+    verdict: "Truth"
+    verdictVariant: "info"
+---
 
-# Myth vs Truth
+## Myth vs Truth
 
-<div v-click>
+---
+layout: before-after
+badPrompt: |
+  #### Bad Prompt
 
-Better prompts = better results. --- ❌ Myth
+  ```markdown
+  Task: Convert a legacy `build.gradle` file to Gradle 8+ syntax and upgrade dependencies to Java 17-compatible versions.
+  ```
+goodPrompt: |
+  #### Good Prompt
 
-</div>
+  ```markdown
+  Task: Convert a legacy build.gradle file to Gradle 8+ syntax and upgrade all dependencies to Java 17 compatible versions
+  only as specified below.
 
-<div v-click>
+  ## Phase 0: General rules
+  • **Constraint**: Do not add comments and try to replace dependencies in-line so they show up clearly in git diff
+  • **Constraint**: Do not upgrade every dependency you think you should do in order to upgrade to Java 17.
+  Stick to the ones mentioned here.
+  • **Constraint**: Do not make any changes beyond current directory.
+  • **Constraint**: If you find compilation errors after making the changes during the validation stage,
+  wait before proceeding to fix those and ask for further inputs.
 
-Better problem framing + context = better results. --- ✅ Truth
+  ## Phase 1: Gradle Syntax Modernization
 
-</div>
+  ### 1. Update log4j dependencies:
+  • Find all log4j dependencies (log4j-api, log4j-core, log4j-1.2-api)
+  • Update version from any existing version to 2.23.1
 
-<br>
+  ### 2. Update Spring dependencies:
+  • Find all Spring dependencies
+  • Update version from any existing version to 6.2.7
 
-<div v-click>
+  ## Phase 2: Structure Preservation and Validation
 
-More context is always better. --- ❌ Myth
+  ### 3. Preserve existing structure:
+  • Keep all other dependencies unchanged
+  • Maintain existing dependency scopes (compileOnly, implementation, testImplementation, etc.)
+  • Preserve all non-dependency blocks (jar, java, test configurations)
 
-</div>
+  ### 4. Validation:
+  • Ensure the build compiles successfully
+  • Verify no functionality is lost in the conversion
+  • Test with: gradle clean build -x test
+  • Ensure Java 17 compatibility for all dependencies
+  • Verify no breaking changes in functionality
 
-<div v-click>
+  ### 5. Add Java tooling, if not there already
+  java {
+       toolchain {
+           languageVersion = JavaLanguageVersion.of(17)
+      }
+   }
 
-Relevant context > more context. --- ✅ Truth
+  ### 6. Add/Modify sourceSets based on project structure. Determine the value to go inside srcDirs.
+  sourceSets {
+      main {
+          java {
+              srcDirs = ['src/main']
+          }
+      }
+  }
 
-</div>
+  ### 7. Remove metaInfDir task. Instead add metaInf { from ('src/main/META-INF') } under jar tag
 
-<br>
-
-<div v-click>
-
-AI understands what you mean. --- ❌ Myth
-
-</div>
-
-<div v-click>
-
-It generates responses based on patterns it has learned. --- ✅ Truth
-
-</div>
-
+  Expected outcome: A fully modernized build.gradle file compatible with Gradle 8+ that uses Java 17 compatible dependencies with
+  official Maven coordinates, eliminating proprietary group IDs and deprecated libraries while maintaining all existing
+  functionality.
+  ```
 ---
 
 # Good vs Bad prompt: Example 1
 
-#### Bad Prompt
+ Contrasts a single vague **Gradle 8 + Java 17** ask with a phased prompt: explicit **constraints**, pinned **dependency versions**, validation commands, and a clear **expected outcome**—so the model stays in scope instead of upgrading everything it can find.
 
-Task: Convert a legacy build.gradle file to Gradle 8+ syntax and upgrade all dependencies to Java 17 compatible versions.
+::before::
 
-#### Good prompt
+<MarkdownContent :content="$frontmatter.badPrompt" />
 
-```markdown
-Task: Convert a legacy build.gradle file to Gradle 8+ syntax and upgrade all dependencies to Java 17 compatible versions
-only as specified below.
+::after::
 
-## Phase 0: General rules
-• **Constraint**: Do not add comments and try to replace dependencies in-line so they show up clearly in git diff
-• **Constraint**: Do not upgrade every dependency you think you should do in order to upgrade to Java 17.
-Stick to the ones mentioned here.
-• **Constraint**: Do not make any changes beyond current directory.
-• **Constraint**: If you find compilation errors after making the changes during the validation stage,
-wait before proceeding to fix those and ask for further inputs.
-
-## Phase 1: Gradle Syntax Modernization
-
-### 1. Update log4j dependencies:
-• Find all log4j dependencies (log4j-api, log4j-core, log4j-1.2-api)
-• Update version from any existing version to 2.23.1
-
-### 2. Update Spring dependencies:
-• Find all Spring dependencies
-• Update version from any existing version to 6.2.7
-
-## Phase 2: Structure Preservation and Validation
-
-### 3. Preserve existing structure:
-• Keep all other dependencies unchanged
-• Maintain existing dependency scopes (compileOnly, implementation, testImplementation, etc.)
-• Preserve all non-dependency blocks (jar, java, test configurations)
-
-### 4. Validation:
-• Ensure the build compiles successfully
-• Verify no functionality is lost in the conversion
-• Test with: gradle clean build -x test
-• Ensure Java 17 compatibility for all dependencies
-• Verify no breaking changes in functionality
-
-### 5. Add Java tooling, if not there already
-java {
-     toolchain {
-         languageVersion = JavaLanguageVersion.of(17)
-    }
- }
-
-### 6. Add/Modify sourceSets based on project structure. Determine the value to go inside srcDirs.
-sourceSets {
-    main {
-        java {
-            srcDirs = ['src/main']
-        }
-    }
-}
-
-### 7. Remove metaInfDir task. Instead add metaInf { from ('src/main/META-INF') } under jar tag
-
-Expected outcome: A fully modernized build.gradle file compatible with Gradle 8+ that uses Java 17 compatible dependencies with
-official Maven coordinates, eliminating proprietary group IDs and deprecated libraries while maintaining all existing
-functionality.
-```
+<MarkdownContent :content="$frontmatter.goodPrompt" />
 
 ---
 
-# Good vs Bad prompt: Example 2
-*Ajitem Sahasrabuddhe*
+## Good vs Bad prompt: Example 2
+
+TBA
 
 ---
+layout: lesson-learned
+---
 
-# Best Practices & Limitations
+::title::
+Best Practices & <span class="ac-accent">Limitations</span>
 
-##
-
-✅ Break problems down
-
-##### Don't hand AI a vague brief like "refactor my code".
-
-✅ Trust, but verify
-
-##### AI is confident even when wrong. Always verify critical outputs.
-
-✅ Ask AI to plan first
-
-##### Ask for a plan of action before the solution. Review, refine, then execute.
-
-✅ Don't chase features.
-
-##### We delivered the Java migration before skills, agents, or custom commands existed. Mindset > Features.
-
-✅ Don't over-engineer your agents
-
-##### AI's power is natural language. Don't clip its wings with essays of rigid instructions.
-
-✅ Never paste sensitive data
-
-##### No credentials, PII, or proprietary code into public models.
+<ol>
+  <li>
+    <span class="num">01</span>
+    <div>
+      <div class="item-title">Break problems down</div>
+      <div class="item-desc">Avoid vague briefs like "refactor my code".</div>
+    </div>
+  </li>
+  <li>
+    <span class="num">02</span>
+    <div>
+      <div class="item-title">Trust, but verify</div>
+      <div class="item-desc">AI can be confidently wrong; verify critical outputs.</div>
+    </div>
+  </li>
+  <li>
+    <span class="num">03</span>
+    <div>
+      <div class="item-title">Ask AI to plan first</div>
+      <div class="item-desc">Review approach before execution.</div>
+    </div>
+  </li>
+  <li>
+    <span class="num">04</span>
+    <div>
+      <div class="item-title">Don't chase features</div>
+      <div class="item-desc">Mindset beats tooling bells and whistles.</div>
+    </div>
+  </li>
+  <li>
+    <span class="num">05</span>
+    <div>
+      <div class="item-title">Don't over-engineer agents</div>
+      <div class="item-desc">Natural language is the leverage, not rigid prompts.</div>
+    </div>
+  </li>
+  <li>
+    <span class="num">06</span>
+    <div>
+      <div class="item-title">Never paste sensitive data</div>
+      <div class="item-desc">No credentials, PII, or proprietary code in public models.</div>
+    </div>
+  </li>
+</ol>
