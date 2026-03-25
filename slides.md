@@ -476,12 +476,37 @@ Don't linger. The tools are examples. The quote is the point.
 -->
 
 ---
-layout: default
+layout: two-cols
 ---
 
 # Ways to Build Context
 
-ABC
+<v-clicks>
+- Organise context: <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.35)' }">architecture docs</span>, <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)' }">coding style</span>, <span v-mark.highlight="{ color: 'rgba(245, 158, 11, 0.25)' }">constraints</span>
+- Real skill: explain what you need <span v-mark.underline="{ color: '#8fd5ff' }">clearly</span>
+</v-clicks>
+
+<v-click>
+<blockquote>Tools help you organise context. Communication moves the needle.</blockquote>
+</v-click>
+
+::right::
+
+### Agency Agents
+- [Open-source specialist agents](https://github.com/msitarzewski/agency-agents) you install into your coding tool
+- Assemble a team (frontend wizards, reality checkers, etc.) without building configs from scratch
+
+<br/>
+
+### OpenViking
+- [Open-source context database](https://openviking.ai) (L0/L1/L2) for an agent's memory as a filesystem
+- Load only the context you need; avoid fragmented vector storage and RAG black boxes
+
+<br/>
+
+### Impeccable
+- [Design vocabulary + skills](https://impeccable.style/) so agents can produce consistent UI/UX work
+- Turns “more vertical rhythm” into concrete, reusable design actions
 
 ---
 layout: two-cols
