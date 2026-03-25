@@ -179,7 +179,7 @@ transition: fade-out
 
 <v-click>
 <p class="mindset-hero__false-start">
-  <span v-mark.strike-through class="mindset-hero__strike">"Here's the codebase. Ship the feature."</span>
+  <span v-mark.strike-through="{ at: 2 }" class="mindset-hero__strike">"Here's the codebase. Ship the feature."</span>
 </p>
 </v-click>
 
@@ -481,11 +481,11 @@ layout: two-cols
 
 # Ways to Build Context
 
+<br/>
 <v-clicks>
-- Organise context: <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.35)' }">architecture docs</span>, <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)' }">coding style</span>, <span v-mark.highlight="{ color: 'rgba(245, 158, 11, 0.25)' }">constraints</span>
-- Real skill: explain what you need <span v-mark.underline="{ color: '#8fd5ff' }">clearly</span>
+- Organise context: <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.35)', at: 1 }">architecture docs</span>, <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)', at: 2 }">coding style</span>, <span v-mark.highlight="{ color: 'rgba(245, 158, 11, 0.25),', at: 3 }">constraints</span>
+- Real skill: explain what you need <span v-mark.underline="{ color: '#8fd5ff', at: 4 }">clearly</span>
 </v-clicks>
-
 <v-click>
 <blockquote>Tools help you organise context. Communication moves the needle.</blockquote>
 </v-click>
