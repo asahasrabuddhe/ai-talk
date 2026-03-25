@@ -66,9 +66,15 @@ Pause after the quote. Then move.
 layout: default
 ---
 
-# Expectations
+# Who is this for?
 
-ABC
+<v-clicks>
+
+- <span v-mark="{ at: 1, type: 'highlight', color: '#22C55E' }">The believers</span> who've delegated half their workflow to it
+- <span v-mark="{ at: 2, type: 'bracket', color: '#EF4444' }">The sceptics</span> who tried it once, got burned, and moved on
+- <span v-mark="{ at: 3, type: 'circle', color: '#8fd5ff' }">The curious</span> who don't know where to start
+
+</v-clicks>
 
 ---
 layout: terminal
@@ -162,12 +168,278 @@ Pause after the quote. Let it sit. This is the sentence you want people to carry
 -->
 
 ---
-layout:default
+layout: center
+class: mindset-hero-slide
+transition: fade-out
 ---
 
-# The Mindset Shift
+<div class="mindset-hero">
 
-ABC
+<p class="mindset-hero__eyebrow">The mindset shift</p>
+
+<v-click>
+<p class="mindset-hero__false-start">
+  <span v-mark.strike-through class="mindset-hero__strike">"Here's the codebase. Ship the feature."</span>
+</p>
+</v-click>
+
+<v-click>
+<p class="mindset-hero__truth">
+  Week one is almost entirely <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.35)' }">context transfer</span>.
+</p>
+</v-click>
+
+<v-click>
+<div class="mindset-hero__chips" aria-label="What day one actually looks like">
+  <span>Domain</span>
+  <span>Architecture</span>
+  <span>Sign-off · autonomy</span>
+  <span>Conventions · deploy · unwritten rules</span>
+</div>
+</v-click>
+
+<v-click>
+<p class="mindset-hero__law">
+  Capability without context → <span v-mark.circle="{ color: '#EF4444' }">wrong output</span>
+</p>
+<p class="mindset-hero__same">Not because the consultant — or the model — is incapable.<br />Humans. AI. <span v-mark.box="{ color: 'rgba(34, 197, 94, 0.45)' }">Same rule</span>.</p>
+</v-click>
+
+<v-click>
+<p class="mindset-hero__punch">The tool isn't the problem.</p>
+<p class="mindset-hero__punch-accent"><span v-mark.underline="{ color: '#8fd5ff' }">The onboarding is</span>.</p>
+</v-click>
+
+</div>
+
+<style scoped>
+.mindset-hero-slide :deep(.slidev-layout.center) {
+  justify-content: center;
+  padding-top: 0;
+}
+.mindset-hero {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.mindset-hero__eyebrow {
+  font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: clamp(1.25rem, 3vh, 2rem);
+}
+.mindset-hero__false-start {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.45;
+  opacity: 0.92;
+  margin: 0 0 1.5rem;
+}
+.mindset-hero__strike {
+  font-style: italic;
+}
+.mindset-hero__truth {
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0 0 1.75rem;
+}
+.mindset-hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+  margin: 0 auto 1.75rem;
+  max-width: 36rem;
+}
+.mindset-hero__chips span {
+  font-size: clamp(0.7rem, 1.35vw, 0.82rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+.mindset-hero__law {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 0.85rem;
+}
+.mindset-hero__same {
+  font-size: clamp(0.88rem, 1.65vw, 1.02rem);
+  line-height: 1.55;
+  opacity: 0.78;
+  margin: 0;
+}
+.mindset-hero__punch {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  opacity: 0.75;
+  margin: 1.75rem 0 0.35rem;
+}
+.mindset-hero__punch-accent {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+</style>
+
+<!--
+HERO — take this slowly; the deck is sparse on purpose.
+
+Technogise day one: contrast the false start on screen with how engagements really open — domain, why the architecture is the way it is, what needs approval vs what you can run with, conventions, deploy path, the unwritten rules. First week is context transfer.
+
+Land: capability without context → wrong output, for people and for AI.
+
+Close verbally with the multiplier line (also on the prior statement slide if you keep that order): if your value is writing code, AI is a threat; if it's solving problems, AI is a multiplier.
+
+Optional beats to say, not show: "Write this function" vs naming the system, problem, constraints, and definition of done — richer context wins, not fancier prompts.
+
+Three principles if you have time: context is the real prompt; iteration beats perfection; conversation beats commands.
+
+Pause on the last click. Let "The onboarding is." hang.
+-->
+
+---
+layout: center
+class: six-levels-slide
+transition: fade-out
+---
+
+# The Six Levels
+
+<v-click>
+  <p class="six-levels__lead">
+    The same skill, escalating autonomy: your <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.30)' }">interface</span> changes every level.
+  </p>
+</v-click>
+
+<div class="six-levels">
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">1</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">No AI</div>
+        <div class="six-levels__meta">You write everything by hand. The <span v-mark.underline="{ color: '#8fd5ff' }">IDE</span> drives navigation, refactors, debugging, tests.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">2</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Code completions</div>
+        <div class="six-levels__meta">AI suggests the next block. You accept/reject—<span v-mark.box="{ color: 'rgba(143, 213, 255, 0.25)' }">inline</span>.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">3</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Chat agents in the IDE</div>
+        <div class="six-levels__meta">You describe intent. The agent edits multi-line with <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)' }">project context</span>.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">4</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">One terminal coding agent</div>
+        <div class="six-levels__meta">Reads/writes the repo, runs tests, iterates. The <span v-mark.circle="{ color: '#34d399' }">IDE</span> is your diff review surface.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">5</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Multiple agents in parallel</div>
+        <div class="six-levels__meta">Each works a separate worktree/task. You supervise windows—less coding, more orchestration.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">6</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Agents run autonomously</div>
+        <div class="six-levels__meta">CI/cloud on a schedule. You review pull requests. The trajectory is clear.</div>
+      </div>
+    </div>
+  </v-click>
+</div>
+
+<style scoped>
+.six-levels-slide :deep(.slidev-layout.center) {
+  padding-top: 0;
+}
+
+.six-levels__lead {
+  max-width: 56rem;
+  margin: 0.2rem auto 1.1rem;
+  opacity: 0.78;
+  line-height: 1.4;
+  font-size: 1.05rem;
+}
+
+.six-levels {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.six-levels__row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.72rem 1rem;
+  margin: 0.55rem 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.six-levels__num {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  color: rgba(143, 213, 255, 0.96);
+  border: 1px solid rgba(143, 213, 255, 0.35);
+  background: rgba(143, 213, 255, 0.10);
+  flex: 0 0 auto;
+}
+
+.six-levels__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.six-levels__label {
+  font-weight: 700;
+  opacity: 0.95;
+  line-height: 1.2;
+}
+
+.six-levels__meta {
+  opacity: 0.82;
+  line-height: 1.35;
+}
+</style>
 
 ---
 
@@ -336,8 +608,6 @@ goodPrompt: |
   functionality.
   ```
 ---
-
-# Good vs Bad prompt: Example 1
 
  Contrasts a single vague **Gradle 8 + Java 17** ask with a phased prompt: explicit **constraints**, pinned **dependency versions**, validation commands, and a clear **expected outcome**—so the model stays in scope instead of upgrading everything it can find.
 
