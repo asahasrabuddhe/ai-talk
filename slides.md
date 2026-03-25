@@ -8,6 +8,7 @@ drawings:
 transition: slide-left
 duration: 35min
 label: TECHNOGISE
+colorSchema: light
 ---
 
 # The Effective Use of AI
@@ -39,28 +40,6 @@ layout: center
 # AI Landscape
 
 ![](./images/slide-1.png)
-
----
-layout: statement
----
-
-> "Love it, hate it — you can't ignore it."
-
-<!--
-Three camps in this room — and you can probably spot all of them.
-
-The believers: they've already delegated half their workflow to AI. They're waiting for everyone else to catch up.
-
-The sceptics: they tried it once, got a confident wrong answer, and decided the whole thing was overhyped. They're waiting to be proven right.
-
-The curious: they haven't really started. They're not sure if they're behind, or if there's still time.
-
-All three are right about something. This talk is for all of them.
-
-Don't rush this slide. Let the room feel acknowledged before you move on. The goal is to make everyone feel like the next 35 minutes is worth their time — wherever they're starting from.
-
-Pause after the quote. Then move.
--->
 
 ---
 layout: default
@@ -129,8 +108,8 @@ The Moment AI <span class="ac-accent">stopped being a tool</span>
 
 The **WOW** moment fades fast! 😕
 
-- Some people offload entire workflows to AI --- and it just works!
-- Some spend 20 minutes rephrasing the same question.
+* Some people offload entire workflows to AI --- and it just works!
+* Some spend 20 minutes rephrasing the same question.
 
 Same tool. Wildly different results.
 
@@ -457,23 +436,7 @@ Context is everything AI needs to not ask you a clarifying question.
 layout: statement
 ---
 
-> "The discipline of articulating your system clearly enough for an AI to work with it makes you a sharper engineer regardless."
-
-<!--
-Keep this brief — it's a setup slide, not the main act. The core message: the real skill isn't knowing which tool to use. It's being able to explain what you need.
-
-Architecture docs, coding style, constraints — these aren't just AI inputs. They're the artefacts of a team that thinks clearly about its own system.
-
-Then introduce two tools as examples of the principle, not the point:
-
-Agency Agents (github.com/msitarzewski/agency-agents) — open-source agent personalities you drop directly into your coding tool. Frontend wizards, reality checkers, specialists. Instead of configuring agents from scratch, you're assembling a team that already knows its job.
-
-OpenViking (openviking.ai) — an open-source context database for AI agents. A filesystem for your agent's brain. Hierarchical structure (L0/L1/L2) so agents load only the context they need, when they need it. No more fragmented vector storage or RAG black boxes.
-
-Frame both as: "Here's what it looks like when someone has thought hard about context organisation."
-
-Don't linger. The tools are examples. The quote is the point.
--->
+> "Articulating your system clearly is a core engineering discipline — and whether you're talking to a teammate or an AI, the clarity you bring in is the quality you get out."
 
 ---
 layout: two-cols
@@ -483,30 +446,33 @@ layout: two-cols
 
 <br/>
 <v-clicks>
-- Organise context: <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.35)', at: 1 }">architecture docs</span>, <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)', at: 2 }">coding style</span>, <span v-mark.highlight="{ color: 'rgba(245, 158, 11, 0.25),', at: 3 }">constraints</span>
-- Real skill: explain what you need <span v-mark.underline="{ color: '#8fd5ff', at: 4 }">clearly</span>
+- Organise context: <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.35)', at: 1 }">architecture docs,</span> <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)', at: 2 }">coding style,</span> <span v-mark.highlight="{ color: 'rgba(245, 158, 11, 0.25),', at: 3 }">constraints</span>
+<br/>
 </v-clicks>
+<v-click>
+- Real skill: explain what you need <span v-mark.underline="{ color: '#8fd5ff', at: 5 }">clearly</span>
+</v-click>
 <v-click>
 <blockquote>Tools help you organise context. Communication moves the needle.</blockquote>
 </v-click>
 
 ::right::
 
+<v-after>
+
 ### Agency Agents
-- [Open-source specialist agents](https://github.com/msitarzewski/agency-agents) you install into your coding tool
-- Assemble a team (frontend wizards, reality checkers, etc.) without building configs from scratch
+[Open-source specialist agents](https://github.com/msitarzewski/agency-agents) you install into your coding tool. Assemble a team (frontend wizards, reality checkers, etc.) without building configs from scratch
 
 <br/>
 
 ### OpenViking
-- [Open-source context database](https://openviking.ai) (L0/L1/L2) for an agent's memory as a filesystem
-- Load only the context you need; avoid fragmented vector storage and RAG black boxes
+[Open-source context database](https://openviking.ai) (L0/L1/L2) for an agent's memory as a filesystem. Load only the context you need; avoid fragmented vector storage and RAG black boxes
 
 <br/>
 
 ### Impeccable
-- [Design vocabulary + skills](https://impeccable.style/) so agents can produce consistent UI/UX work
-- Turns “more vertical rhythm” into concrete, reusable design actions
+[Design vocabulary + skills](https://impeccable.style/) so agents can produce consistent UI/UX work. Turns “more vertical rhythm” into concrete, reusable design actions
+</v-after>
 
 ---
 layout: two-cols
@@ -529,39 +495,52 @@ Google -> ✅ Exact answer
 - Different outcomes  
 
 <v-click>
-<blockquote>It's not knowing AI. It's about how to <em>communicate</em> with it.
-</blockquote>
+<blockquote>It's not knowing AI. It's about how to <em>communicate</em> with it.</blockquote>
 </v-click>
 
 ---
-layout: comparison-table
-title: "Myth vs Truth"
-subtitle: "Prompting discipline over prompt tricks"
-columns:
-  - "Myth"
-  - "Truth"
-rows:
-  - criterion: "Prompt quality"
-    values:
-      - "Better prompts = better results"
-      - "Better framing + context = better results"
-    verdict: "Truth"
-    verdictVariant: "info"
-  - criterion: "Context amount"
-    values:
-      - "More context is always better"
-      - "Relevant context > more context"
-    verdict: "Truth"
-    verdictVariant: "amber"
-  - criterion: "Model understanding"
-    values:
-      - "AI understands what you mean"
-      - "AI predicts patterns from training"
-    verdict: "Truth"
-    verdictVariant: "info"
----
 
-## Myth vs Truth
+# Myth vs Truth
+
+<div v-click>
+
+Better prompts = better results. --- ❌ Myth
+
+</div>
+
+<div v-click>
+
+Better problem framing + context = better results. --- ✅ Truth
+
+</div>
+
+<br>
+
+<div v-click>
+
+More context is always better. --- ❌ Myth
+
+</div>
+
+<div v-click>
+
+Relevant context > more context. --- ✅ Truth
+
+</div>
+
+<br>
+
+<div v-click>
+
+AI understands what you mean. --- ❌ Myth
+
+</div>
+
+<div v-click>
+
+It generates responses based on patterns it has learned. --- ✅ Truth
+
+</div>
 
 ---
 layout: before-after
@@ -569,7 +548,9 @@ badPrompt: |
   #### Bad Prompt
 
   ```markdown
-  Task: Convert a legacy `build.gradle` file to Gradle 8+ syntax and upgrade dependencies to Java 17-compatible versions.
+  Task: Convert a legacy `build.gradle` file to 
+  Gradle 8+ syntax and upgrade dependencies to 
+  Java 17-compatible versions.
   ```
 goodPrompt: |
   #### Good Prompt
@@ -633,8 +614,6 @@ goodPrompt: |
   functionality.
   ```
 ---
-
- Contrasts a single vague **Gradle 8 + Java 17** ask with a phased prompt: explicit **constraints**, pinned **dependency versions**, validation commands, and a clear **expected outcome**—so the model stays in scope instead of upgrading everything it can find.
 
 ::before::
 
