@@ -306,6 +306,8 @@ layout: two-cols
 <v-click>
 - Real skill: explain what you need <span v-mark.underline="{ color: '#8fd5ff', at: 5 }">clearly</span>
 </v-click>
+<br/><br/><br/>
+<br/><br/><br/>
 <v-click>
 <blockquote>Tools help you organise context. Communication moves the needle.</blockquote>
 </v-click>
@@ -347,11 +349,14 @@ Google -> ✅ Exact answer
 - Same tool  
 - Same access  
 - Different outcomes  
-
+<br/><br/>
+<br/><br/>
 <v-click>
 <blockquote>It's not knowing AI. It's about how to <em>communicate</em> with it.</blockquote>
 </v-click>
 
+---
+layout: default
 ---
 
 # Myth vs Truth
@@ -480,12 +485,16 @@ goodPrompt: |
 ---
 layout: before-after
 before: |
+  #### Bad Prompt
+
   ```
   gh can sometimes not be installed or not authenticated 
   with the right credentials. Can you fix it so it shows
   something when there's an error?
   ```
 after: |
+  #### Good Prompt
+
   ```
   Summary
   gh is listed as a hard requirement for PR and CI status. If it is not installed or not authenticated, gwaim silently returns empty PR fields on every worktree card with no explanation. A new user who has not yet run gh auth login will see blank PR sections and have no idea why. The tool should degrade gracefully — detect the missing or unauthenticated gh CLI, surface a clear message, and keep everything else functional.
