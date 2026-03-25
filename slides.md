@@ -645,10 +645,73 @@ goodPrompt: |
 <MarkdownContent :content="$frontmatter.goodPrompt" />
 
 ---
+layout: before-after
+before: |
+  ```
+  gh can sometimes not be installed or not authenticated 
+  with the right credentials. Can you fix it so it shows
+  something when there's an error?
+  ```
+after: |
+  ```
+  Summary
+  gh is listed as a hard requirement for PR and CI status. If it is not installed or not authenticated, gwaim silently returns empty PR fields on every worktree card with no explanation. A new user who has not yet run gh auth login will see blank PR sections and have no idea why. The tool should degrade gracefully — detect the missing or unauthenticated gh CLI, surface a clear message, and keep everything else functional.
 
-## Good vs Bad prompt: Example 2
+  Current behaviour
+  If gh is not installed:
 
-TBA
+  PR fields on all cards are silently empty.
+  No error is shown.
+  The tool continues to function but looks broken.
+  If gh is installed but not authenticated:
+
+  Same silent failure.
+  CLAUDE.md mentions: “The gh CLI must be authenticated (gh auth login) or PR fetching silently returns no results.”
+  This is documented for agents but completely invisible to end users.
+  Expected behaviour
+  If gh is not installed or not authenticated, gwaim should:
+
+  Detect the condition at startup (or on first refresh).
+  Show a clear, actionable message on the status bar or within the PR field of each card — e.g. PR status unavailable: run gh auth login or gh CLI not found.
+  Continue operating normally for all other features (worktree listing, agent detection, sync status, create/delete/pull).
+  Proposed implementation
+  In internal/github/pr.go, wrap the gh invocation with a pre-flight check:
+
+    ```go
+    func isGhAvailable() error {
+        _, err := exec.LookPath("gh")
+        if err != nil {
+            return fmt.Errorf("gh CLI not found: install from https://cli.github.com")
+        }
+
+        cmd := exec.Command("gh", "auth", "status")
+        if err := cmd.Run(); err != nil {
+            return fmt.Errorf("gh CLI not authenticated: run 'gh auth login'")
+        }
+
+        return nil
+    }
+    ```
+
+  Return a typed error that the TUI can distinguish from a network or API error, and render it appropriately on the card or status bar.
+
+  ## Acceptance criteria
+
+  [] gwaim detects missing gh CLI at startup and shows a clear message
+  [] gwaim detects unauthenticated gh CLI and shows an actionable message (gh auth login)
+  [] All non-PR features continue to work normally when gh is unavailable
+  [] PR card fields show a human-readable unavailability indicator rather than blank fields
+  [] Detection runs once at startup (not on every refresh) to avoid performance overhead
+  ```
+---
+
+::before::
+
+<MarkdownContent :content="$frontmatter.before"></MarkdownContent>
+
+::after::
+
+<MarkdownContent :content="$frontmatter.after"></MarkdownContent>
 
 ---
 layout: lesson-learned
