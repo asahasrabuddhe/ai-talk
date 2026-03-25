@@ -10,3 +10,7 @@
     right: -80% !important;
     text-align: left;
 }
+
+ol li {
+    padding: 5px 7px !important;
+}

@@ -34,14 +34,6 @@ $ agent "Add pagination to GET /users — limit + offset, max 100 per page"
 ```
 
 ---
-layout: center
----
-
-# AI Landscape
-
-![](./images/slide-1.png)
-
----
 layout: default
 ---
 
@@ -281,144 +273,6 @@ Three principles if you have time: context is the real prompt; iteration beats p
 
 Pause on the last click. Let "The onboarding is." hang.
 -->
-
----
-layout: center
-class: six-levels-slide
-transition: fade-out
----
-
-# The Six Levels
-
-<v-click>
-  <p class="six-levels__lead">
-    The same skill, escalating autonomy: your <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.30)' }">interface</span> changes every level.
-  </p>
-</v-click>
-
-<div class="six-levels">
-  <v-click>
-    <div class="six-levels__row">
-      <span class="six-levels__num">1</span>
-      <div class="six-levels__body">
-        <div class="six-levels__label">No AI</div>
-        <div class="six-levels__meta">You write everything by hand. The <span v-mark.underline="{ color: '#8fd5ff' }">IDE</span> drives navigation, refactors, debugging, tests.</div>
-      </div>
-    </div>
-  </v-click>
-
-  <v-click>
-    <div class="six-levels__row">
-      <span class="six-levels__num">2</span>
-      <div class="six-levels__body">
-        <div class="six-levels__label">Code completions</div>
-        <div class="six-levels__meta">AI suggests the next block. You accept/reject—<span v-mark.box="{ color: 'rgba(143, 213, 255, 0.25)' }">inline</span>.</div>
-      </div>
-    </div>
-  </v-click>
-
-  <v-click>
-    <div class="six-levels__row">
-      <span class="six-levels__num">3</span>
-      <div class="six-levels__body">
-        <div class="six-levels__label">Chat agents in the IDE</div>
-        <div class="six-levels__meta">You describe intent. The agent edits multi-line with <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)' }">project context</span>.</div>
-      </div>
-    </div>
-  </v-click>
-
-  <v-click>
-    <div class="six-levels__row">
-      <span class="six-levels__num">4</span>
-      <div class="six-levels__body">
-        <div class="six-levels__label">One terminal coding agent</div>
-        <div class="six-levels__meta">Reads/writes the repo, runs tests, iterates. The <span v-mark.circle="{ color: '#34d399' }">IDE</span> is your diff review surface.</div>
-      </div>
-    </div>
-  </v-click>
-
-  <v-click>
-    <div class="six-levels__row">
-      <span class="six-levels__num">5</span>
-      <div class="six-levels__body">
-        <div class="six-levels__label">Multiple agents in parallel</div>
-        <div class="six-levels__meta">Each works a separate worktree/task. You supervise windows—less coding, more orchestration.</div>
-      </div>
-    </div>
-  </v-click>
-
-  <v-click>
-    <div class="six-levels__row">
-      <span class="six-levels__num">6</span>
-      <div class="six-levels__body">
-        <div class="six-levels__label">Agents run autonomously</div>
-        <div class="six-levels__meta">CI/cloud on a schedule. You review pull requests. The trajectory is clear.</div>
-      </div>
-    </div>
-  </v-click>
-</div>
-
-<style scoped>
-.six-levels-slide :deep(.slidev-layout.center) {
-  padding-top: 0;
-}
-
-.six-levels__lead {
-  max-width: 56rem;
-  margin: 0.2rem auto 1.1rem;
-  opacity: 0.78;
-  line-height: 1.4;
-  font-size: 1.05rem;
-}
-
-.six-levels {
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-.six-levels__row {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  padding: 0.72rem 1rem;
-  margin: 0.55rem 0;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.six-levels__num {
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 850;
-  letter-spacing: -0.02em;
-  color: rgba(143, 213, 255, 0.96);
-  border: 1px solid rgba(143, 213, 255, 0.35);
-  background: rgba(143, 213, 255, 0.10);
-  flex: 0 0 auto;
-}
-
-.six-levels__body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.six-levels__label {
-  font-weight: 700;
-  opacity: 0.95;
-  line-height: 1.2;
-}
-
-.six-levels__meta {
-  opacity: 0.82;
-  line-height: 1.35;
-}
-</style>
 
 ---
 
@@ -692,6 +546,145 @@ after: |
 
 <MarkdownContent :content="$frontmatter.after"></MarkdownContent>
 
+
+---
+layout: center
+class: six-levels-slide
+transition: fade-out
+---
+
+# The Six Levels
+
+<v-click>
+  <p class="six-levels__lead">
+    The same skill, escalating autonomy: your <span v-mark.highlight="{ color: 'rgba(143, 213, 255, 0.30)' }">interface</span> changes every level.
+  </p>
+</v-click>
+
+<div class="six-levels">
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">1</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">No AI</div>
+        <div class="six-levels__meta">You write everything by hand. The <span v-mark.underline="{ color: '#8fd5ff' }">IDE</span> drives navigation, refactors, debugging, tests.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">2</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Code completions</div>
+        <div class="six-levels__meta">AI suggests the next block. You accept/reject—<span v-mark.box="{ color: 'rgba(143, 213, 255, 0.25)' }">inline</span>.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">3</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Chat agents in the IDE</div>
+        <div class="six-levels__meta">You describe intent. The agent edits multi-line with <span v-mark.highlight="{ color: 'rgba(34, 197, 94, 0.25)' }">project context</span>.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">4</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">One terminal coding agent</div>
+        <div class="six-levels__meta">Reads/writes the repo, runs tests, iterates. The <span v-mark.circle="{ color: '#34d399' }">IDE</span> is your diff review surface.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">5</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Multiple agents in parallel</div>
+        <div class="six-levels__meta">Each works a separate worktree/task. You supervise windows—less coding, more orchestration.</div>
+      </div>
+    </div>
+  </v-click>
+
+  <v-click>
+    <div class="six-levels__row">
+      <span class="six-levels__num">6</span>
+      <div class="six-levels__body">
+        <div class="six-levels__label">Agents run autonomously</div>
+        <div class="six-levels__meta">CI/cloud on a schedule. You review pull requests. The trajectory is clear.</div>
+      </div>
+    </div>
+  </v-click>
+</div>
+
+<style scoped>
+.six-levels-slide :deep(.slidev-layout.center) {
+  padding-top: 0;
+}
+
+.six-levels__lead {
+  max-width: 56rem;
+  margin: 0.2rem auto 1.1rem;
+  opacity: 0.78;
+  line-height: 1.4;
+  font-size: 1.05rem;
+}
+
+.six-levels {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.six-levels__row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.72rem 1rem;
+  margin: 0.55rem 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.six-levels__num {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  color: rgba(143, 213, 255, 0.96);
+  border: 1px solid rgba(143, 213, 255, 0.35);
+  background: rgba(143, 213, 255, 0.10);
+  flex: 0 0 auto;
+}
+
+.six-levels__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.six-levels__label {
+  font-weight: 700;
+  opacity: 0.95;
+  line-height: 1.2;
+}
+
+.six-levels__meta {
+  opacity: 0.82;
+  line-height: 1.35;
+}
+</style>
+
 ---
 layout: lesson-learned
 ---
@@ -701,42 +694,36 @@ Best Practices & <span class="ac-accent">Limitations</span>
 
 <ol>
   <li>
-    <span class="num">01</span>
     <div>
       <div class="item-title">Break problems down</div>
       <div class="item-desc">Avoid vague briefs like "refactor my code".</div>
     </div>
   </li>
   <li>
-    <span class="num">02</span>
     <div>
       <div class="item-title">Trust, but verify</div>
       <div class="item-desc">AI can be confidently wrong; verify critical outputs.</div>
     </div>
   </li>
   <li>
-    <span class="num">03</span>
     <div>
       <div class="item-title">Ask AI to plan first</div>
       <div class="item-desc">Review approach before execution.</div>
     </div>
   </li>
   <li>
-    <span class="num">04</span>
     <div>
       <div class="item-title">Don't chase features</div>
       <div class="item-desc">Mindset beats tooling bells and whistles.</div>
     </div>
   </li>
   <li>
-    <span class="num">05</span>
     <div>
       <div class="item-title">Don't over-engineer agents</div>
       <div class="item-desc">Natural language is the leverage, not rigid prompts.</div>
     </div>
   </li>
   <li>
-    <span class="num">06</span>
     <div>
       <div class="item-title">Never paste sensitive data</div>
       <div class="item-desc">No credentials, PII, or proprietary code in public models.</div>
