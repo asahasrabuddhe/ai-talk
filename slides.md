@@ -1,5 +1,5 @@
 ---
-theme: slidev-theme-architectural-console
+theme: architectural-console
 background: https://cover.sli.dev
 title: The Effective Use of AI
 class: text-center
