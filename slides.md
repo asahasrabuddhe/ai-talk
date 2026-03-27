@@ -11,10 +11,7 @@ label: TECHNOGISE
 colorSchema: light
 ---
 
-# The Effective Use of AI
-
-::subtitle::
-Practical AI workflows, context engineering, and agentic execution
+# Effective Use of AI
 
 ::speaker::
 Kush & Ajitem
